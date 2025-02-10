@@ -33,6 +33,8 @@
       "package": "user.app",
       "permissions": [
         "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.RECORD_AUDIO",
         "android.permission.MODIFY_AUDIO_SETTINGS"
       ]
     },
@@ -91,6 +93,12 @@
       "eas": {
         "projectId": "91814b8f-146a-483a-b013-521c94b0fa12"
       }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/91814b8f-146a-483a-b013-521c94b0fa12"
     }
   }
 }

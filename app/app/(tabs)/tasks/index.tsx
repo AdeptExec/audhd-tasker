@@ -18,27 +18,21 @@ export default function TasksScreen() {
 
   return (
     <View>
-      {isLoading ? (
-        <View>
-          <Text style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>Loading tasks...</Text>
-        </View>
+      {!!isLoading ? (
+        <Text style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>Loading tasks...</Text>
       ) : error ? (
-        <View>
-          <Text style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>{error}</Text>
-        </View>
+        <Text style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>{error}</Text>
       ) : tasks.length === 0 ? (
-        <View>
-          <Text style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            No tasks yet. Tap the + button to create one.
-          </Text>
-        </View>
+        <Text style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+          No tasks yet. Tap the + button to create one.
+        </Text>
       ) : (
         <FlatList
           data={tasks}
           renderItem={({ item }) => <TaskCard task={item} />}
           keyExtractor={item => item.id}
           contentContainerStyle={{ padding: 16 }}
-          ItemSeparatorComponent={() => <View style={{ height: 8 }}/>}
+          ItemSeparatorComponent={() => <View style={{ height: 8 }} />}
         />
       )}
     </View>

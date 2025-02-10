@@ -13,17 +13,9 @@ import { useSession } from "@/lib/context/SessionProvider";
  * @returns {JSX.Element} Sign-in form component
  */
 export default function Signin() {
-  // ============================================================================
-  // Hooks & State
-  // ============================================================================
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { signIn } = useSession();
-
-  // ============================================================================
-  // Handlers
-  // ============================================================================
 
   /**
    * Handles the sign-in process
@@ -53,10 +45,6 @@ export default function Signin() {
     // signInWithRedirect(auth, googleProvider);
     // router.replace("/(app)/(drawer)/(tabs)/");
   }
-
-  // ============================================================================
-  // Render
-  // ============================================================================
 
   return (
     <SafeAreaView className="flex h-full w-full justify-center items-center bg-dull-primary">

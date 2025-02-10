@@ -1,4 +1,21 @@
 {
+  "name": "src",
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.0.0",
+  "private": true,
+  "main": "expo-router/entry",
+  "engines": {
+    "node": "^20.18.2",
+    "pnpm": "10.0.0"
+  },
+  "scripts": {
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "lint": "expo lint",
+    "start": "expo start",
+    "test": "jest --watchAll",
+    "web": "expo start --web"
+  },
   "dependencies": {
     "@babel/runtime": "^7.26.7",
     "@expo/vector-icons": "^14.0.2",
@@ -35,11 +52,13 @@
     "expo-status-bar": "~2.0.1",
     "expo-symbols": "~0.2.2",
     "expo-system-ui": "~4.0.7",
+    "expo-updates": "~0.26.17",
     "expo-web-browser": "~14.0.2",
     "firebase": "^11.0.1",
     "lodash": "^4.17.21",
     "nativewind": "^4.1.23",
     "react": "^18.2.0",
+    "react-devtools": "^6.1.1",
     "react-dom": "^18.2.0",
     "react-native": "^0.77.0",
     "react-native-css-interop": "^0.1.22",
@@ -76,18 +95,5 @@
   },
   "jest": {
     "preset": "jest-expo"
-  },
-  "main": "expo-router/entry",
-  "name": "src",
-  "packageManager": "pnpm@9.12.1",
-  "private": true,
-  "scripts": {
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "lint": "expo lint",
-    "start": "expo start",
-    "test": "jest --watchAll",
-    "web": "expo start --web"
-  },
-  "version": "1.0.0"
+  }
 }

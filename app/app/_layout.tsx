@@ -8,12 +8,10 @@ export default function RootLayout() {
   const colorScheme = useColorScheme();
 
   return (
-    // <AuthProvider>
     <SessionProvider>
       <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
         <Slot />
       </ThemeProvider>
     </SessionProvider>
-    // </AuthProvider>
   );
 }

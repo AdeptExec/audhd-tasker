@@ -15,7 +15,6 @@ export default function SignUp() {
   const handleSignUpPress = async () => {
     try {
       const resp = await signUp(email, password, name);
-      // console.log(resp)
       if (resp) {
         const user: SignUpRequest = {
           username: name.toLowerCase(),
